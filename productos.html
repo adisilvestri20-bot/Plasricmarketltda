@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Productos — PlasticMarket</title>
+<meta name="description" content="Productos de plástico industrial PlasticMarket: láminas PVC, tablas antibacteriales para alimentos, estacas, pisos modulares y componentes a medida, fabricados en Chile." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; font-family: 'Inter', sans-serif; color: #14171A; background: #fff; }
+  * { box-sizing: border-box; }
+  a { color: inherit; }
+  img { max-width: 100%; }
+  @keyframes reveal { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { animation: reveal 0.7s ease both; }
+  .prod-card { cursor: pointer; }
+</style>
+</head>
+<body>
+  <a href="https://www.instagram.com/plasticmarket_ltda?igsh=bzdhNzZxZzh2YmZp&igsi=bzdhNzZxZzh2YmZp" target="_blank" rel="noopener" aria-label="Instagram" style="position: fixed; right: 24px; bottom: 92px; width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.25); z-index: 40;">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="6" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+  </a>
+  <a href="https://wa.me/56933722400" target="_blank" rel="noopener" aria-label="WhatsApp" style="position: fixed; right: 24px; bottom: 24px; width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,0.25); z-index: 999; transition: transform 0.2s ease;">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.001 3C9.11 3 3.5 8.61 3.5 15.5c0 2.29.62 4.44 1.7 6.29L3 29l7.4-2.14a12.44 12.44 0 0 0 5.6 1.36h.01c6.89 0 12.5-5.61 12.5-12.5S22.9 3 16.001 3Zm0 22.63h-.01a10.4 10.4 0 0 1-5.3-1.45l-.38-.22-3.94 1.14 1.15-3.83-.25-.4a10.34 10.34 0 0 1-1.62-5.37c0-5.75 4.68-10.43 10.43-10.43 2.79 0 5.4 1.09 7.37 3.06a10.36 10.36 0 0 1 3.05 7.38c0 5.75-4.68 10.42-10.5 10.42Zm5.72-7.8c-.31-.16-1.85-.91-2.14-1.02-.29-.1-.5-.16-.71.16-.21.31-.81 1.02-1 1.23-.18.21-.37.23-.68.08-.31-.16-1.32-.49-2.5-1.55-.93-.83-1.55-1.85-1.74-2.16-.18-.31-.02-.48.14-.63.14-.14.31-.37.47-.55.16-.19.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.72-.98-2.35-.26-.63-.52-.54-.71-.55h-.6c-.21 0-.55.08-.84.39-.29.31-1.1 1.08-1.1 2.63s1.13 3.05 1.29 3.26c.16.21 2.22 3.39 5.38 4.75.75.32 1.34.51 1.8.66.76.24 1.44.21 1.99.13.61-.09 1.85-.76 2.11-1.49.26-.73.26-1.36.18-1.49-.08-.13-.29-.21-.6-.37Z" fill="#fff"/></svg>
+  </a>
+
+
+<div>
+  <nav style="position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px clamp(20px,5vw,64px); background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid #E3E6EA; flex-wrap: wrap;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div style="width: 44px; height: 44px; border-radius: 8px; background: #1F4E8C; display: flex; align-items: center; justify-content: center; padding: 4px;">
+        <img src="./logo.png" alt="PlasticMarket" style="width: 100%; height: 100%; object-fit: contain;" />
+      </div>
+      <span style="font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: -0.01em;">PlasticMarket</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: clamp(16px,3vw,36px); flex-wrap: wrap;">
+      <a href="index.html" data-i18n="navHome" style="color: #5B6470; text-decoration: none; font-weight: 500; font-size: 15px;">Inicio</a>
+      <a href="productos.html" data-i18n="navProducts" style="color: #14171A; text-decoration: none; font-weight: 600; font-size: 15px;">Productos</a>
+      <a href="contacto.html" data-i18n="navContact" style="color: #5B6470; text-decoration: none; font-weight: 500; font-size: 15px;">Contacto</a>
+      <button type="button" id="lang-toggle" style="background: transparent; border: 1.5px solid #E3E6EA; color: #14171A; font-weight: 700; font-size: 13px; padding: 8px 14px; border-radius: 999px; cursor: pointer; font-family: 'Inter', sans-serif;">EN</button>
+      <a href="https://wa.me/56933722400" target="_blank" rel="noopener" style="background: #1F4E8C; color: #fff; text-decoration: none; font-weight: 700; font-size: 14px; padding: 12px 22px; border-radius: 999px; white-space: nowrap;">Solicitar cotización</a>
+    </div>
+  </nav>
+
+  <section style="padding: clamp(56px,8vw,110px) clamp(20px,5vw,64px) clamp(40px,6vw,72px); background: #0F2A4D;">
+    <div class="reveal" style="max-width: 720px;">
+      <img src="./logo-mark-green-3.png" alt="" style="width: 88px; height: 88px; object-fit: contain; margin-bottom: 14px;" />
+      <div data-i18n="catalogEyebrow" style="color: #7ED957; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px;">Catálogo</div>
+      <h1 style="font-family: 'Manrope', sans-serif; font-weight: 800; color: #fff; font-size: clamp(32px,4.5vw,52px); line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 18px; text-transform: uppercase;">Productos<br />Industriales</h1>
+      <p data-i18n="catalogText" style="color: rgba(255,255,255,0.82); font-size: 17px; line-height: 1.65; margin: 0;">Soluciones fabricadas en Chile, muchas de ellas disponibles con nuestro compuesto antibacterial de partículas de cobre incorporado.</p>
+    </div>
+  </section>
+
+  <section style="padding: clamp(56px,8vw,100px) clamp(20px,5vw,64px);">
+    <div id="products-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; max-width: 1240px; margin: 0 auto;"></div>
+  </section>
+
+  <div id="modal" style="display: none; position: fixed; inset: 0; z-index: 500; background: rgba(15,42,77,0.75); align-items: center; justify-content: center; padding: 24px;">
+    <div id="modal-panel" style="background: #fff; border-radius: 18px; max-width: 720px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative;">
+      <button id="modal-close" style="position: absolute; top: 14px; right: 14px; z-index: 2; width: 36px; height: 36px; border-radius: 50%; background: rgba(15,42,77,0.85); color: #fff; border: none; font-size: 18px; cursor: pointer;">×</button>
+      <div style="position: relative; overflow: hidden; height: 340px; background: #F4F5F7;">
+        <div id="modal-track" style="display: flex; height: 100%; transition: transform 0.3s ease;"></div>
+        <button id="modal-prev" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.9); border: none; font-size: 18px; cursor: pointer;">‹</button>
+        <button id="modal-next" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.9); border: none; font-size: 18px; cursor: pointer;">›</button>
+        <div id="modal-dots" style="position: absolute; bottom: 12px; left: 0; right: 0; display: flex; justify-content: center; gap: 6px;"></div>
+      </div>
+      <div style="padding: 28px 30px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+          <h3 id="modal-title" style="font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase; margin: 0;"></h3>
+          <span id="modal-antibacterial" data-i18n="badge" style="display: none; background: #FBF0E5; color: #B5652D; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px;">ANTIBACTERIAL</span>
+        </div>
+        <p id="modal-detail" style="color: #5B6470; font-size: 15.5px; line-height: 1.65; margin: 0 0 18px;"></p>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin: 0 0 24px;">
+          <div style="display: flex; align-items: flex-start; gap: 10px;">
+            <div style="width: 6px; height: 6px; border-radius: 50%; background: #1F4E8C; margin-top: 7px; flex-shrink: 0;"></div>
+            <span style="color: #14171A; font-size: 14.5px; line-height: 1.5;"><strong data-i18n="colorsLabel">Colores personalizados:</strong> <span id="modal-colors"></span></span>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 10px;">
+            <div style="width: 6px; height: 6px; border-radius: 50%; background: #1F4E8C; margin-top: 7px; flex-shrink: 0;"></div>
+            <span style="color: #14171A; font-size: 14.5px; line-height: 1.5;"><strong data-i18n="sizesLabel">Medidas personalizadas:</strong> <span id="modal-sizes"></span></span>
+          </div>
+        </div>
+        <a href="https://wa.me/56933722400" target="_blank" rel="noopener" style="display: inline-block; background: #1F4E8C; color: #fff; text-decoration: none; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 8px;">Solicitar cotización</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="padding: clamp(64px,9vw,120px) clamp(20px,5vw,64px); background: #0F2A4D;">
+    <div class="reveal" style="max-width: 780px; margin: 0 auto; text-align: center;">
+      <img src="./logo-mark-green-3.png" alt="" style="width: 88px; height: 88px; object-fit: contain; margin-bottom: 14px;" />
+      <div data-i18n="specialEyebrow" style="color: #7ED957; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px;">Proyectos especiales</div>
+      <h2 data-i18n="specialTitle" style="font-family: 'Manrope', sans-serif; font-weight: 800; color: #fff; font-size: clamp(28px,4vw,44px); letter-spacing: -0.015em; margin: 0 0 20px; text-transform: uppercase;">Fabricamos lo que tu empresa necesita.</h2>
+      <p data-i18n="specialText" style="color: rgba(255,255,255,0.8); font-size: 17px; line-height: 1.65; margin: 0 0 48px;">Si existe una idea, nosotros la convertimos en un producto industrial. Desarrollamos soluciones completamente a medida, desde la ingeniería hasta la fabricación final.</p>
+    </div>
+    <div id="special-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto;">
+      <div class="reveal" style="padding: 30px 26px; border-radius: 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);">
+        <h3 data-es="Componentes técnicos" style="font-family: 'Manrope', sans-serif; font-weight: 700; color: #fff; font-size: 17px; text-transform: uppercase; letter-spacing: 0.02em; margin: 0 0 8px;">Componentes técnicos</h3>
+        <p data-es="Piezas de precisión para procesos productivos exigentes." style="color: rgba(255,255,255,0.68); font-size: 14px; line-height: 1.55; margin: 0;">Piezas de precisión para procesos productivos exigentes.</p>
+      </div>
+      <div class="reveal" style="padding: 30px 26px; border-radius: 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);">
+        <h3 data-es="Soluciones alimentarias" style="font-family: 'Manrope', sans-serif; font-weight: 700; color: #fff; font-size: 17px; text-transform: uppercase; letter-spacing: 0.02em; margin: 0 0 8px;">Soluciones alimentarias</h3>
+        <p data-es="Productos con protección antibacterial para contacto con alimentos." style="color: rgba(255,255,255,0.68); font-size: 14px; line-height: 1.55; margin: 0;">Productos con protección antibacterial para contacto con alimentos.</p>
+      </div>
+      <div class="reveal" style="padding: 30px 26px; border-radius: 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);">
+        <h3 data-es="Desarrollos a medida" style="font-family: 'Manrope', sans-serif; font-weight: 700; color: #fff; font-size: 17px; text-transform: uppercase; letter-spacing: 0.02em; margin: 0 0 8px;">Desarrollos a medida</h3>
+        <p data-es="Productos diseñados desde cero junto al cliente." style="color: rgba(255,255,255,0.68); font-size: 14px; line-height: 1.55; margin: 0;">Productos diseñados desde cero junto al cliente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: clamp(64px,8vw,110px) clamp(20px,5vw,64px); background: #1F4E8C; text-align: center;">
+    <img src="./logo-mark-green-3.png" alt="" style="width: 88px; height: 88px; object-fit: contain; margin-bottom: 14px;" />
+    <h2 data-i18n="ctaTitle" style="font-family: 'Manrope', sans-serif; font-weight: 800; color: #fff; font-size: clamp(28px,4vw,46px); letter-spacing: -0.015em; margin: 0 0 18px; text-transform: uppercase;">¿Tienes un proyecto industrial?</h2>
+    <p data-i18n="ctaText" style="color: rgba(255,255,255,0.85); font-size: 17px; max-width: 560px; margin: 0 auto 36px;">Cuéntanos tu idea y la convertimos en un producto industrial real, desde la ingeniería hasta la producción.</p>
+    <a href="contacto.html" data-i18n="ctaBtn" style="display: inline-block; background: #fff; color: #1F4E8C; text-decoration: none; font-weight: 700; font-size: 17px; padding: 18px 40px; border-radius: 8px;">Solicitar asesoría</a>
+  </section>
+
+  <footer style="padding: 64px clamp(20px,5vw,64px) 28px; background: #0F2A4D; color: rgba(255,255,255,0.75);">
+    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.12);">
+      <div>
+        <div style="font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 20px; color: #fff; margin-bottom: 14px;">PlasticMarket</div>
+        <p data-i18n="footerTagline" style="font-size: 14px; line-height: 1.6; max-width: 260px;">Fabricación de productos industriales de plástico y caucho termoplástico en Chile, con tecnología antibacterial propia.</p>
+      </div>
+      <div>
+        <div data-i18n="footerNav" style="color: #fff; font-weight: 700; font-size: 14px; margin-bottom: 16px;">Navegación</div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="index.html" data-i18n="navHome" style="color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px;">Inicio</a>
+          <a href="productos.html" data-i18n="navProducts" style="color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px;">Productos</a>
+          <a href="contacto.html" data-i18n="navContact" style="color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px;">Contacto</a>
+        </div>
+      </div>
+      <div>
+        <div style="color: #fff; font-weight: 700; font-size: 14px; margin-bottom: 16px;">Contacto</div>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+          <span>Av. Quilín 2746, Santiago de Chile</span>
+          <span>+56 9 3372 2400</span>
+          <span>ventas@plastic-market.com</span>
+        </div>
+      </div>
+      <div>
+        <div data-i18n="footerFollow" style="color: #fff; font-weight: 700; font-size: 14px; margin-bottom: 16px;">Síguenos</div>
+        <div style="display: flex; gap: 12px;">
+          <a href="#" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; font-size: 12px; font-weight: 700;">in</a>
+          <a href="https://www.instagram.com/plasticmarket_ltda?igsh=bzdhNzZxZzh2YmZp&igsi=bzdhNzZxZzh2YmZp" target="_blank" rel="noopener" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; font-size: 12px; font-weight: 700;">ig</a>
+        </div>
+      </div>
+    </div>
+    <p data-i18n="footerCopy" style="font-size: 12.5px; color: rgba(255,255,255,0.4); text-align: center; margin: 24px 0 0; line-height: 1.6;">© 2026 PlasticMarket SpA — Plásticos industriales, caucho termoplástico, matricería, inyección, extrusión y coextrusión en Chile. Compuesto antibacterial con partículas de cobre.</p>
+  </footer>
+</div>
+
+<script>
+  const products = [
+    { id: 'prod-pvc', title: 'Láminas PVC transparentes', text: 'Alta transparencia y resistencia para aplicaciones industriales y comerciales.', detail: 'Láminas de PVC rígido con alta transparencia óptica, ideales para protecciones, ventanas industriales, mamparas de separación, empaques rígidos y aplicaciones donde se requiere visibilidad total junto con resistencia al impacto y a la manipulación diaria. Se fabrican en distintos espesores según el uso: desde protecciones livianas hasta paneles de mayor resistencia estructural para ambientes industriales y comerciales.', placeholder: 'Foto: láminas PVC', colors: 'transparente, ahumado y a solicitud del cliente', sizes: 'espesores y dimensiones a medida según proyecto', antibacterial: false, photos: ['./pvc-1.jpg', './pvc-2.png', './pvc-3.png'] },
+    { id: 'prod-tablas-cortar', title: 'Tablas para cortar alimentos', text: 'Superficie antibacterial con cobre incorporado, ideal para uso alimentario.', detail: 'Tablas de picar fabricadas con nuestro compuesto antibacterial de partículas de cobre incorporadas en la materia prima, entregando una protección activa y permanente contra bacterias durante toda la vida útil del producto. Pensadas para cocinas industriales, restaurantes, plantas de proceso de alimentos y uso doméstico exigente, resisten cortes repetidos, lavado frecuente y contacto directo con distintos tipos de alimentos sin perder sus propiedades higiénicas.', placeholder: 'Foto: tablas de cortar alimentos', colors: 'blanco, verde, rojo y azul (código de higiene)', sizes: 'chica, mediana, grande y a medida', antibacterial: true, photos: ['./tabla-cocina-poster-new.png', './tabla-cocina-2.png', './tabla-cocina-3.png', './tabla-cocina-4.png'] },
+    { id: 'prod-estacas-mineria', title: 'Estacas plásticas para minería', text: 'Alta resistencia mecánica y a la intemperie para faenas mineras.', detail: 'Estacas de señalización y demarcación fabricadas para soportar las condiciones más exigentes de faenas mineras: radiación UV intensa, cambios bruscos de temperatura, viento y manipulación en terreno. Su geometría y material permiten una instalación rápida, alta visibilidad y una vida útil prolongada sin fisurarse ni perder color, reduciendo la necesidad de reposición frecuente en comparación con soluciones de madera o metal.', placeholder: 'Foto: estacas plásticas para minería', colors: 'naranja, amarillo, rojo y blanco de alta visibilidad', sizes: 'largos y diámetros a solicitud', antibacterial: false, photos: ['./estacas-mineria-poster-new.png', './estacas-mineria-2.jpeg'] },
+    { id: 'prod-malla-antihelada', title: 'Soporte de malla antihelada', text: 'Estructura de soporte para protección de cultivos contra heladas.', detail: 'Soporte plástico diseñado para sostener mallas de protección antihelada en cultivos agrícolas, ofreciendo estabilidad estructural frente al viento y resistencia a la exposición solar prolongada. Su diseño facilita la instalación en terreno y permite tensar la malla de forma pareja, protegiendo la producción agrícola de las bajas temperaturas nocturnas sin comprometer la durabilidad del sistema temporada tras temporada.', placeholder: 'Foto: soporte de malla antihelada', colors: 'negro y verde estándar, otros colores bajo pedido', sizes: 'alturas y anchos según diseño del cultivo', antibacterial: false, photos: ['./malla-antihelada-poster-new.png', './malla-antihelada-1.jpg', './malla-antihelada-3.jpeg'] },
+    { id: 'prod-soporte-iv', title: 'Soporte plástico antibacterial para medicamento intravenoso', text: 'Compuesto antibacterial con cobre, diseñado para uso hospitalario.', detail: 'Soporte plástico para medicamentos intravenosos fabricado con nuestro compuesto antibacterial de partículas de cobre, pensado específicamente para entornos hospitalarios donde el control de bacterias es crítico. Ofrece protección permanente en superficies de contacto frecuente, resistencia a la limpieza con soluciones hospitalarias y estabilidad mecánica para sostener equipos médicos de forma segura en pabellones, salas clínicas y unidades de cuidado intensivo.', placeholder: 'Foto: soporte plástico para IV', colors: 'blanco y colores institucionales hospitalarios', sizes: 'medidas según equipo y protocolo hospitalario', antibacterial: true, photos: ['./soporte-iv-poster-new.jpg', './soporte-iv-2.png', './soporte-iv-3.png'] },
+    { id: 'prod-pisos-antifatiga', title: 'Pisos antifatiga / antideslizante', text: 'Confort y seguridad para puestos de trabajo de pie prolongado.', detail: 'Pisos modulares antifatiga con superficie antideslizante, diseñados para reducir el cansancio muscular en puestos de trabajo donde el personal permanece de pie por largos periodos, como líneas de producción, cocinas industriales y laboratorios. Su textura previene resbalones incluso en presencia de agua o grasa, y su instalación modular permite reemplazar secciones puntuales sin intervenir toda la superficie.', placeholder: 'Foto: piso antifatiga antideslizante', colors: 'negro, gris y colores corporativos a pedido', sizes: 'módulos estándar y formatos a medida', antibacterial: false, photos: ['./pisos-antifatiga-poster-new.jpg', './pisos-antifatiga-2.png', './pisos-antifatiga-3.png'] },
+    { id: 'prod-tablas-documento', title: 'Tablas de documento antibacterial', text: 'Superficie de apoyo con protección antibacterial permanente.', detail: 'Tablas porta documentos (clipboards) fabricadas con compuesto antibacterial de cobre incorporado, orientadas a entornos donde múltiples personas manipulan el mismo elemento durante el día: hospitales, plantas industriales, bodegas y terreno. La protección antibacterial se mantiene incluso con el desgaste normal del uso diario, ya que forma parte del material y no de un recubrimiento superficial que pueda rayarse o desprenderse.', placeholder: 'Foto: tabla de documento antibacterial', colors: 'blanco, gris y colores institucionales', sizes: 'tamaño carta, oficio y a medida', antibacterial: true, photos: ['./tabla-multiuso-poster-new.png', './tabla-multiuso-2.png', './tabla-multiuso-3.png'] },
+    { id: 'prod-topes-puerta', title: 'Topes para puerta', text: 'Piezas de inyección de alta durabilidad para uso residencial e industrial.', detail: 'Topes de puerta fabricados por inyección de plástico de alta resistencia al impacto, diseñados para uso frecuente en edificios residenciales, oficinas y plantas industriales. Su geometría amortigua el cierre de puertas evitando daños en muros y marcos, manteniendo su forma y elasticidad incluso después de miles de ciclos de uso continuo.', placeholder: 'Foto: topes para puerta', colors: 'blanco, gris, negro y colores a pedido', sizes: 'alturas y diámetros según tipo de puerta', antibacterial: false, photos: ['./topes-poster-new.jpg', './topes-2.png', './topes-3.png'] },
+    { id: 'prod-recubrimiento-metal', title: 'Recubrimiento caucho/plástico para metal', text: 'Protección y aislación de piezas metálicas mediante recubrimiento técnico.', detail: 'Recubrimientos de caucho o plástico aplicados sobre piezas metálicas para aportar aislación eléctrica o térmica, protección contra la corrosión, amortiguación de impactos y una mejor sujeción o agarre. Se desarrollan a medida según la pieza metálica del cliente, adaptando espesor, dureza y tipo de material al uso final: herramientas, estructuras, mangos o componentes técnicos.', placeholder: 'Foto: recubrimiento caucho/plástico para metal', colors: 'negro, gris y colores a solicitud del cliente', sizes: 'espesores y dimensiones según pieza metálica', antibacterial: false, photos: ['./recubrimiento-1.png', './recubrimiento-2.jpg'] },
+    { id: 'prod-gorras-ffaa', title: 'Dispositivos plásticos para gorras FF.AA.', text: 'Componentes técnicos de precisión para uniformidad de las Fuerzas Armadas.', detail: 'Componentes plásticos técnicos fabricados por inyección de precisión para la confección de gorras y uniformes de las Fuerzas Armadas, cumpliendo con las especificaciones dimensionales y de resistencia exigidas por las instituciones. Se producen bajo estrictos estándares de calidad y consistencia, garantizando uniformidad en cada lote fabricado para pedidos institucionales de gran volumen.', placeholder: 'Foto: dispositivos plásticos para gorras FF.AA.', colors: 'colores institucionales según especificación', sizes: 'medidas según norma técnica institucional', antibacterial: false, photos: ['./gorras-ffaa-1.png', './gorras-ffaa-2.png', './gorras-ffaa-3.png'] },
+    { id: 'prod-casco-carabineros', title: 'Casco + gorra protección Carabineros de Chile', text: 'Elementos de protección personal desarrollados a medida institucional.', detail: 'Elementos de protección personal desarrollados a medida para Carabineros de Chile, combinando casco y gorra de protección fabricados bajo especificaciones institucionales estrictas de seguridad, ergonomía y durabilidad. El desarrollo incluye ingeniería de producto, selección de materiales técnicos y validación conjunta con la institución antes de pasar a producción en serie.', placeholder: 'Foto: casco y gorra de protección Carabineros', colors: 'colores institucionales de la institución', sizes: 'tallas y medidas según especificación oficial', antibacterial: false, photos: ['./casco-1.png', './casco-2.png', './casco-3.png'] },
+    { id: 'prod-metalizados', title: 'Desarrollo de productos metalizados', text: 'Piezas plásticas y de caucho con acabado metalizado de alta definición para logos e insignias corporativas.', detail: 'Desarrollamos emblemas, logos e insignias en caucho/plástico con acabado metalizado (cromado, oro, plata y otros tonos metálicos) de alta definición, replicando con precisión el detalle, relieve y brillo de una pieza metálica real, pero con el menor peso, costo y flexibilidad de fabricación del plástico. Ideal para logos automotrices, insignias corporativas, placas y piezas de identificación de marca que requieren una terminación premium. Cada pieza se desarrolla a medida según el arte, tamaño y sistema de fijación del cliente, con acabado personalizado en el color metálico solicitado.', placeholder: 'Foto: producto plástico metalizado', colors: 'cromado, oro, plata y acabados metalizados personalizados según la marca del cliente', sizes: 'medidas y geometrías 100% a medida según el logo o pieza a reproducir', antibacterial: false, photos: ['./metalizados-poster-new.png', './avis-emblem.jpg', './avis-car.jpg'] },
+    { id: 'prod-cintas-perimetrales', title: 'Cintas para cierres perimetrales', text: 'Estructura flexible y resistente para el cierre y protección de entornos abiertos.', detail: 'Cintas flexibles fabricadas para la instalación de cierres perimetrales en rejas, mallas y estructuras metálicas, entregando seguridad visual y física en entornos abiertos como viviendas, jardines y espacios comerciales. Su estructura flexible se adapta a distintos tipos de barrotes y permite una instalación rápida en terreno, manteniendo su resistencia a la intemperie y a la manipulación diaria a lo largo del tiempo.', placeholder: 'Foto: cintas para cierres perimetrales', colors: 'verde, azul, blanco, negro y a solicitud del cliente', sizes: 'anchos y largos personalizados según el proyecto', antibacterial: false, photos: ['./cintas-perimetrales-poster.png', './cintas-perimetrales-2.png', './cintas-perimetrales-3.png'] },
+    { id: 'prod-juntas-dilatacion', title: 'Cubre juntas de dilatación', text: 'Previenen grietas, fisuras y desprendimientos frente a la variación de temperatura.', detail: 'Juntas de dilatación fabricadas para la instalación entre baldosas y pavimentos, absorbiendo los movimientos naturales de expansión y contracción del material ante los cambios de temperatura. Previenen la aparición de grietas, fisuras y desprendimientos, y son resistentes a la humedad y a agentes químicos, lo que las hace aptas tanto para interiores como para terrazas y espacios exteriores.', placeholder: 'Foto: juntas de dilatación para baldosas', colors: 'blanco, gris y a solicitud del cliente', sizes: 'anchos y largos personalizados según el proyecto', antibacterial: false, photos: ['./juntas-dilatacion-poster.png', './juntas-dilatacion-2.png', './juntas-dilatacion-3b.jpg', './juntas-dilatacion-3.png'] },
+  ];
+
+  const productsEnText = {
+    'prod-pvc': { title: 'Transparent PVC sheets', text: 'High transparency and strength for industrial and commercial applications.', detail: 'Rigid PVC sheets with high optical transparency, ideal for guards, industrial windows, partition screens, rigid packaging and applications requiring full visibility combined with impact and daily-handling resistance. Manufactured in different thicknesses depending on use: from lightweight guards to panels with greater structural strength for industrial and commercial environments.', colors: 'clear, smoked and on client request', sizes: 'custom thicknesses and dimensions per project' },
+    'prod-tablas-cortar': { title: 'Food cutting boards', text: 'Antibacterial surface with built-in copper, ideal for food use.', detail: 'Cutting boards made with our antibacterial compound of copper particles built into the raw material, delivering active, permanent protection against bacteria for the entire product life. Designed for industrial kitchens, restaurants, food processing plants and demanding home use, they withstand repeated cutting, frequent washing and direct contact with different foods without losing their hygienic properties.', colors: 'white, green, red and blue (hygiene code)', sizes: 'small, medium, large and custom' },
+    'prod-estacas-mineria': { title: 'Plastic stakes for mining', text: 'High mechanical and weather resistance for mining operations.', detail: 'Signaling and marking stakes built to withstand the toughest mining site conditions: intense UV radiation, sharp temperature swings, wind and field handling. Their geometry and material allow fast installation, high visibility and a long service life without cracking or fading, reducing the need for frequent replacement compared to wood or metal solutions.', colors: 'high-visibility orange, yellow, red and white', sizes: 'lengths and diameters on request' },
+    'prod-malla-antihelada': { title: 'Frost-net support', text: 'Support structure for protecting crops against frost.', detail: 'Plastic support designed to hold frost-protection netting in agricultural crops, offering structural stability against wind and resistance to prolonged sun exposure. Its design makes field installation easy and allows even tensioning of the net, protecting crops from low night temperatures without compromising system durability season after season.', colors: 'standard black and green, other colors on request', sizes: 'heights and widths per crop design' },
+    'prod-soporte-iv': { title: 'Antibacterial plastic IV medication support', text: 'Antibacterial compound with copper, designed for hospital use.', detail: 'Plastic support for intravenous medication made with our antibacterial copper-particle compound, designed specifically for hospital environments where bacteria control is critical. It offers permanent protection on frequently touched surfaces, resistance to cleaning with hospital solutions, and mechanical stability to safely hold medical equipment in operating rooms, clinical wards and intensive care units.', colors: 'white and hospital institutional colors', sizes: 'sizes per equipment and hospital protocol' },
+    'prod-pisos-antifatiga': { title: 'Anti-fatigue / anti-slip flooring', text: 'Comfort and safety for workstations with prolonged standing.', detail: 'Anti-fatigue modular flooring with an anti-slip surface, designed to reduce muscle fatigue at workstations where staff stand for long periods, such as production lines, industrial kitchens and laboratories. Its texture prevents slips even with water or grease present, and its modular installation allows specific sections to be replaced without disturbing the whole surface.', colors: 'black, gray and corporate colors on request', sizes: 'standard modules and custom formats' },
+    'prod-tablas-documento': { title: 'Antibacterial clipboard', text: 'Support surface with permanent antibacterial protection.', detail: 'Clipboards made with a built-in antibacterial copper compound, aimed at environments where multiple people handle the same item throughout the day: hospitals, industrial plants, warehouses and field work. Antibacterial protection remains even with normal daily wear, since it is part of the material and not a surface coating that can scratch off.', colors: 'white, gray and institutional colors', sizes: 'letter, legal and custom sizes' },
+    'prod-topes-puerta': { title: 'Door stoppers', text: 'High-durability injection-molded parts for residential and industrial use.', detail: 'Door stoppers made by high impact-resistance plastic injection, designed for frequent use in residential buildings, offices and industrial plants. Their geometry cushions door closing, preventing damage to walls and frames, keeping their shape and elasticity even after thousands of continuous-use cycles.', colors: 'white, gray, black and colors on request', sizes: 'heights and diameters per door type' },
+    'prod-recubrimiento-metal': { title: 'Rubber/plastic coating for metal', text: 'Protection and insulation of metal parts through technical coating.', detail: "Rubber or plastic coatings applied over metal parts to provide electrical or thermal insulation, corrosion protection, impact cushioning and better grip. Developed to measure for the client's metal part, adapting thickness, hardness and material type to the final use: tools, structures, handles or technical components.", colors: 'black, gray and colors on client request', sizes: 'thicknesses and dimensions per metal part' },
+    'prod-gorras-ffaa': { title: 'Plastic devices for Armed Forces caps', text: 'Precision technical components for Armed Forces uniform manufacturing.', detail: 'Technical plastic components made by precision injection for the manufacturing of Armed Forces caps and uniforms, meeting the dimensional and strength specifications required by the institutions. Produced under strict quality and consistency standards, guaranteeing uniformity in every batch for large-volume institutional orders.', colors: 'institutional colors per specification', sizes: 'sizes per institutional technical standard' },
+    'prod-casco-carabineros': { title: 'Helmet + protective cap for Chilean Carabineros', text: 'Personal protective equipment developed to institutional specification.', detail: 'Personal protective equipment developed to measure for Chilean Carabineros, combining a helmet and protective cap manufactured under strict institutional specifications for safety, ergonomics and durability. Development includes product engineering, technical material selection and joint validation with the institution before moving to series production.', colors: "the institution's official colors", sizes: 'sizes per official specification' },
+    'prod-metalizados': { title: 'Metallized product development', text: 'Plastic and rubber parts with high-definition metallized finish for logos and corporate emblems.', detail: "We develop emblems, logos and badges in rubber/plastic with a high-definition metallized finish (chrome, gold, silver and other metallic tones), precisely replicating the detail, relief and shine of a real metal piece, but with the lighter weight, lower cost and manufacturing flexibility of plastic. Ideal for automotive logos, corporate emblems, plates and brand identification pieces that require a premium finish. Each piece is custom developed according to the client's artwork, size and fixing system, with a personalized finish in the requested metallic color.", colors: "chrome, gold, silver and custom metallized finishes per the client's brand", sizes: '100% custom measurements and geometries per the logo or piece to reproduce' },
+    'prod-cintas-perimetrales': { title: 'Perimeter fencing tape', text: 'Flexible, resistant structure for closing and protecting open environments.', detail: 'Flexible tapes made for installing perimeter closures on railings, fencing and metal structures, providing visual and physical security in open environments such as homes, gardens and commercial spaces. Its flexible structure adapts to different types of bars and allows quick field installation, keeping its resistance to weather and daily handling over time.', colors: 'green, blue, white, black and on client request', sizes: 'custom widths and lengths per project' },
+    'prod-juntas-dilatacion': { title: 'Expansion joints for tiles', text: 'Prevent cracks, fissures and detachment from temperature variation.', detail: "Expansion joints made for installation between tiles and pavements, absorbing the material's natural expansion and contraction movements from temperature changes. They prevent cracks, fissures and detachment, and are resistant to moisture and chemical agents, making them suitable for both interiors and outdoor terraces and spaces.", colors: 'white, gray and on client request', sizes: 'custom widths and lengths per project' },
+  };
+  const specialAreasEn = [
+    { title: 'Technical components', text: 'Precision parts for demanding production processes.' },
+    { title: 'Food-grade solutions', text: 'Products with antibacterial protection for food contact.' },
+    { title: 'Custom developments', text: 'Products designed from scratch together with the client.' },
+  ];
+  let currentLang = 'es';
+  try { currentLang = localStorage.getItem('pm_lang') || 'es'; } catch(e){}
+
+  const grid = document.getElementById('products-grid');
+  function placeholderTile(label) {
+    return `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(135deg,#EEF0F2,#EEF0F2 10px,#E3E6EA 10px,#E3E6EA 20px);color:#9AA3AD;font-family:monospace;font-size:11px;text-align:center;padding:6px;">${label}</div>`;
+  }
+  function localize(p, lang) {
+    return lang === 'en' && productsEnText[p.id] ? { ...p, ...productsEnText[p.id] } : p;
+  }
+
+  function renderProducts(lang) {
+    grid.innerHTML = '';
+    products.forEach(base => {
+      const p = localize(base, lang);
+      const card = document.createElement('div');
+      card.className = 'prod-card';
+      card.style.cssText = 'position:relative;border-radius:18px;overflow:hidden;border:1px solid #E3E6EA;display:flex;flex-direction:column;';
+      const cover = p.photos[0]
+        ? `<img src="${p.photos[0]}" alt="${p.placeholder}" style="width:100%;height:100%;object-fit:cover;" />`
+        : placeholderTile(p.placeholder);
+      const badgeLabel = lang === 'en' ? 'ANTIBACTERIAL' : 'ANTIBACTERIAL';
+      card.innerHTML = `
+        <div style="width:100%;aspect-ratio:4/3;overflow:hidden;background:#F4F5F7;">${cover}</div>
+        <div style="padding:22px 24px;background:#fff;flex:1;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <h3 style="font-family:'Manrope',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;margin:0;">${p.title}</h3>
+            ${p.antibacterial ? `<span style="background:#FBF0E5;color:#B5652D;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;letter-spacing:0.02em;">${badgeLabel}</span>` : ''}
+          </div>
+          <p style="color:#5B6470;font-size:14.5px;line-height:1.55;margin:0;">${p.text}</p>
+        </div>
+      `;
+      card.addEventListener('click', () => openModal(p, lang));
+      grid.appendChild(card);
+    });
+  }
+  renderProducts(currentLang);
+
+  const modal = document.getElementById('modal');
+  const track = document.getElementById('modal-track');
+  const dotsEl = document.getElementById('modal-dots');
+  let activeImages = [];
+  let idx = 0;
+
+  function renderCarousel() {
+    track.innerHTML = activeImages.map(src => src
+      ? `<div style="width:100%;height:100%;flex-shrink:0;"><img src="${src}" style="width:100%;height:100%;object-fit:contain;" /></div>`
+      : `<div style="width:100%;height:100%;flex-shrink:0;">${placeholderTile('Foto')}</div>`
+    ).join('');
+    track.style.transform = `translateX(${-idx * 100}%)`;
+    dotsEl.innerHTML = activeImages.map((_, i) => `<div style="width:7px;height:7px;border-radius:50%;background:${i === idx ? '#1F4E8C' : '#D8DDE3'};"></div>`).join('');
+  }
+
+  function openModal(p, lang) {
+    activeImages = p.photos.length ? p.photos : [null, null, null];
+    idx = 0;
+    document.getElementById('modal-title').textContent = p.title;
+    document.getElementById('modal-antibacterial').textContent = lang === 'en' ? 'ANTIBACTERIAL' : 'ANTIBACTERIAL';
+    document.getElementById('modal-antibacterial').style.display = p.antibacterial ? 'inline-block' : 'none';
+    document.getElementById('modal-detail').textContent = p.detail;
+    document.getElementById('modal-colors').textContent = p.colors;
+    document.getElementById('modal-sizes').textContent = p.sizes;
+    renderCarousel();
+    modal.style.display = 'flex';
+  }
+  document.getElementById('modal-close').addEventListener('click', () => modal.style.display = 'none');
+  modal.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
+  document.getElementById('modal-next').addEventListener('click', (e) => { e.stopPropagation(); idx = (idx + 1) % activeImages.length; renderCarousel(); });
+  document.getElementById('modal-prev').addEventListener('click', (e) => { e.stopPropagation(); idx = (idx + activeImages.length - 1) % activeImages.length; renderCarousel(); });
+</script>
+
+<script>
+(function(){
+  const T = { en: {
+    navHome:'Home', navProducts:'Products', navContact:'Contact', navQuote:'Request a quote',
+    catalogEyebrow:'Catalog', catalogText:'Solutions manufactured in Chile, many available with our antibacterial compound with copper particles.',
+    badge:'ANTIBACTERIAL', colorsLabel:'Custom colors:', sizesLabel:'Custom sizes:',
+    specialEyebrow:'Special projects', specialTitle:'We manufacture what your company needs.',
+    specialText:"If there is an idea, we turn it into an industrial product. We develop fully custom solutions, from engineering to final manufacturing.",
+    ctaTitle:'Have an industrial project?', ctaText:"Tell us your idea and we'll turn it into a real industrial product, from engineering to production.", ctaBtn:'Request guidance',
+    footerTagline:'Manufacturing of industrial plastic and thermoplastic rubber products in Chile, with our own antibacterial technology.',
+    footerNav:'Navigation', footerFollow:'Follow us',
+    footerCopy:'© 2026 PlasticMarket SpA — Industrial plastics, thermoplastic rubber, tooling, injection, extrusion and coextrusion in Chile. Antibacterial compound with copper particles.',
+  }};
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.dataset.es = el.innerHTML; });
+  function apply(lang){
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      el.innerHTML = (lang === 'en' && T.en[key]) ? T.en[key] : el.dataset.es;
+    });
+    const btn = document.getElementById('lang-toggle');
+    if (btn) btn.textContent = lang === 'es' ? 'EN' : 'ES';
+    renderProducts(lang);
+    const specialCards = document.querySelectorAll('#special-grid h3');
+    if (specialCards.length) {
+      const list = lang === 'en' ? specialAreasEn : null;
+      specialCards.forEach((h3, i) => {
+        const p = h3.nextElementSibling;
+        if (list) { h3.textContent = list[i].title; if (p) p.textContent = list[i].text; }
+        else { h3.textContent = h3.dataset.es; if (p) p.textContent = p.dataset.es; }
+      });
+    }
+  }
+  let lang = currentLang;
+  apply(lang);
+  const btn = document.getElementById('lang-toggle');
+  if (btn) btn.addEventListener('click', () => {
+    lang = lang === 'es' ? 'en' : 'es';
+    try { localStorage.setItem('pm_lang', lang); } catch(e){}
+    apply(lang);
+  });
+})();
+</script>
+</body>
+</html>
