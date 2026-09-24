@@ -30,6 +30,11 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-18144420530');
+    // Conversión Google Ads: clics en WhatsApp, teléfono, correo y botón del formulario
+    document.addEventListener('click', function (e) {
+      var el = e.target.closest && e.target.closest('a[href*="wa.me"], a[href^="tel:"], a[href^="mailto:"], #submit-btn');
+      if (el) gtag('event', 'conversion', {'send_to': 'AW-18144420530/qy2zCJeH8v4cELLF98tD'});
+    });
 </script>
   </head>
 <body>
