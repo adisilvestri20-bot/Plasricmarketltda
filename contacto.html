@@ -78,44 +78,54 @@
     <div class="reveal" style="max-width: 720px;">
       <div data-i18n="navContact" style="color: #C7EFCB; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px;">Contacto</div>
       <h1 data-i18n="contactHeroTitle" style="font-family: 'Manrope', sans-serif; font-weight: 800; color: #fff; font-size: clamp(32px,4.5vw,52px); letter-spacing: -0.02em; margin: 0 0 18px;">HABLEMOS DE TU PROYECTO</h1>
-      <p data-i18n="contactHeroText" style="color: rgba(255,255,255,0.88); font-size: 17px; line-height: 1.65; margin: 0;">Completa el formulario y te contactaremos por WhatsApp para revisar los detalles de tu proyecto industrial.</p>
+      <p data-i18n="contactHeroText" style="color: rgba(255,255,255,0.88); font-size: 17px; line-height: 1.65; margin: 0;">Completa el formulario, adjunta tu plano si lo tienes, y te contactaremos para revisar los detalles de tu proyecto industrial.</p>
     </div>
   </section>
 
   <section style="padding: clamp(48px,7vw,88px) clamp(20px,5vw,64px);">
     <div class="contact-grid" style="max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px;">
 
-      <form class="reveal" style="display: flex; flex-direction: column; gap: 20px;">
+      <form id="quote-form" class="reveal" action="https://formsubmit.co/ventas@plastic-market.com" method="POST" enctype="multipart/form-data" style="display: flex; flex-direction: column; gap: 20px;">
+        <input type="hidden" name="_subject" value="Nueva solicitud de cotización — plastic-market.com" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="https://plastic-market.com/contacto.html?enviado=1" />
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none;" />
+        <div id="form-ok" role="status" style="display: none; background: #E8F5E9; border: 1px solid #A5D6A7; color: #1B5E20; padding: 14px 16px; border-radius: 8px; font-size: 15px; font-weight: 600;" data-i18n="formOk">¡Gracias! Recibimos tu solicitud y te contactaremos a la brevedad.</div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px,100%),1fr)); gap: 20px;">
           <div style="display: flex; flex-direction: column; gap: 8px;">
             <label data-i18n="formName" style="font-size: 13.5px; font-weight: 600; color: #14171A;">Nombre *</label>
-            <input id="f-nombre" type="text" data-i18n-ph="formNamePh" placeholder="Tu nombre" style="padding: 13px 14px; border: 1px solid #E3E6EA; border-radius: 8px; font-size: 15px; font-family: 'Inter', sans-serif;" />
+            <input id="f-nombre" name="Nombre" required type="text" data-i18n-ph="formNamePh" placeholder="Tu nombre" style="padding: 13px 14px; border: 1px solid #E3E6EA; border-radius: 8px; font-size: 15px; font-family: 'Inter', sans-serif;" />
           </div>
           <div style="display: flex; flex-direction: column; gap: 8px;">
             <label data-i18n="formCompany" style="font-size: 13.5px; font-weight: 600; color: #14171A;">Empresa *</label>
-            <input id="f-empresa" type="text" data-i18n-ph="formCompanyPh" placeholder="Nombre de la empresa" style="padding: 13px 14px; border: 1px solid #E3E6EA; border-radius: 8px; font-size: 15px; font-family: 'Inter', sans-serif;" />
+            <input id="f-empresa" name="Empresa" required type="text" data-i18n-ph="formCompanyPh" placeholder="Nombre de la empresa" style="padding: 13px 14px; border: 1px solid #E3E6EA; border-radius: 8px; font-size: 15px; font-family: 'Inter', sans-serif;" />
           </div>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px,100%),1fr)); gap: 20px;">
           <div style="display: flex; flex-direction: column; gap: 8px;">
             <label data-i18n="formRole" style="font-size: 13.5px; font-weight: 600; color: #14171A;">Cargo</label>
-            <input id="f-cargo" type="text" data-i18n-ph="formRolePh" placeholder="Tu cargo" style="padding: 13px 14px; border: 1px solid #E3E6EA; border-radius: 8px; font-size: 15px; font-family: 'Inter', sans-serif;" />
+            <input id="f-cargo" name="Cargo" type="text" data-i18n-ph="formRolePh" placeholder="Tu cargo" style="padding: 13px 14px; border: 1px solid #E3E6EA; border-radius: 8px; font-size: 15px; font-family: 'Inter', sans-serif;" />
           </div>
           <div style="display: flex; flex-direction: column; gap: 8px;">
             <label data-i18n="formPhone" style="font-size: 13.5px; font-weight: 600; color: #14171A;">Teléfono</label>
-            <input id="f-telefono" type="tel" placeholder="+56 9 ..." style="padding: 13px 14px; border: 1px solid #E3E6EA; border-radius: 8px; font-size: 15px; font-family: 'Inter', sans-serif;" />
+            <input id="f-telefono" name="Teléfono" type="tel" placeholder="+56 9 ..." style="padding: 13px 14px; border: 1px solid #E3E6EA; border-radius: 8px; font-size: 15px; font-family: 'Inter', sans-serif;" />
           </div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 8px;">
           <label data-i18n="formEmail" style="font-size: 13.5px; font-weight: 600; color: #14171A;">Correo *</label>
-          <input id="f-correo" type="email" data-i18n-ph="formEmailPh" placeholder="tucorreo@empresa.cl" style="padding: 13px 14px; border: 1px solid #E3E6EA; border-radius: 8px; font-size: 15px; font-family: 'Inter', sans-serif;" />
+          <input id="f-correo" name="email" required type="email" data-i18n-ph="formEmailPh" placeholder="tucorreo@empresa.cl" style="padding: 13px 14px; border: 1px solid #E3E6EA; border-radius: 8px; font-size: 15px; font-family: 'Inter', sans-serif;" />
         </div>
         <div style="display: flex; flex-direction: column; gap: 8px;">
           <label data-i18n="formDesc" style="font-size: 13.5px; font-weight: 600; color: #14171A;">Descripción del proyecto *</label>
-          <textarea id="f-descripcion" rows="5" data-i18n-ph="formDescPh" placeholder="Cuéntanos qué necesitas fabricar..." style="padding: 13px 14px; border: 1px solid #E3E6EA; border-radius: 8px; font-size: 15px; font-family: 'Inter', sans-serif; resize: vertical;"></textarea>
+          <textarea id="f-descripcion" name="Descripción del proyecto" required rows="5" data-i18n-ph="formDescPh" placeholder="Cuéntanos qué necesitas fabricar..." style="padding: 13px 14px; border: 1px solid #E3E6EA; border-radius: 8px; font-size: 15px; font-family: 'Inter', sans-serif; resize: vertical;"></textarea>
         </div>
-        <button type="button" id="submit-btn" data-i18n="formSubmit" style="background: #1F4E8C; color: #fff; border: none; font-weight: 700; font-size: 16px; padding: 16px 28px; border-radius: 8px; cursor: pointer; margin-top: 8px;">Quiero desarrollar mi proyecto</button>
-        <p data-i18n="formNote" style="color: #9AA3AD; font-size: 12.5px; margin: 0;">Al enviar, se abrirá WhatsApp con los datos de tu solicitud pre-cargados.</p>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <label for="f-plano" data-i18n="formFile" style="font-size: 13.5px; font-weight: 600; color: #14171A;">Adjunta tu plano, dibujo o foto (opcional)</label>
+          <input id="f-plano" name="attachment" type="file" accept=".pdf,.dwg,.dxf,.step,.stp,.igs,.iges,.stl,.jpg,.jpeg,.png,.zip" style="padding: 13px 14px; border: 1px solid #E3E6EA; border-radius: 8px; font-size: 15px; font-family: 'Inter', sans-serif; background: #FAFBFC;" />
+          <span data-i18n="formFileHelp" style="color: #9AA3AD; font-size: 12.5px;">PDF, DWG, DXF, STEP, STL, JPG o PNG. Máximo 10 MB.</span>
+        </div>
+        <button type="submit" id="submit-btn" data-i18n="formSubmit" style="background: #1F4E8C; color: #fff; border: none; font-weight: 700; font-size: 16px; padding: 16px 28px; border-radius: 8px; cursor: pointer; margin-top: 8px;">Quiero desarrollar mi proyecto</button>
+        <p data-i18n="formNote" style="color: #9AA3AD; font-size: 12.5px; margin: 0;">Tu solicitud llegará a ventas@plastic-market.com y te responderemos a la brevedad. ¿Prefieres conversar ahora? Escríbenos por WhatsApp con el botón de abajo.</p>
       </form>
 
       <div class="reveal" style="display: flex; flex-direction: column; gap: 24px;">
@@ -202,20 +212,17 @@
   tabSantiago.addEventListener('click', () => setLocation('santiago'));
   tabMiami.addEventListener('click', () => setLocation('miami'));
 
-  document.getElementById('submit-btn').addEventListener('click', () => {
-    const v = (id) => (document.getElementById(id).value || '').trim();
-    const lines = [
-      'Hola PlasticMarket, quiero desarrollar mi proyecto:',
-      v('f-nombre') && `Nombre: ${v('f-nombre')}`,
-      v('f-empresa') && `Empresa: ${v('f-empresa')}`,
-      v('f-cargo') && `Cargo: ${v('f-cargo')}`,
-      v('f-telefono') && `Teléfono: ${v('f-telefono')}`,
-      v('f-correo') && `Correo: ${v('f-correo')}`,
-      v('f-descripcion') && `Descripción del proyecto: ${v('f-descripcion')}`,
-    ].filter(Boolean);
-    const text = encodeURIComponent(lines.join('\n'));
-    window.open(`https://wa.me/56995019832?text=${text}`, '_blank');
-  });
+  (function(){
+    const f = document.getElementById('quote-form'); if (!f) return;
+    const file = document.getElementById('f-plano');
+    f.addEventListener('submit', (e) => {
+      if (file && file.files && file.files[0] && file.files[0].size > 10*1024*1024) {
+        e.preventDefault(); alert('El archivo supera los 10 MB. Por favor envíalo comprimido o por WhatsApp.'); return;
+      }
+      const b = document.getElementById('submit-btn'); if (b) { b.disabled = true; b.style.opacity = '0.7'; }
+    });
+    if (/[?&]enviado=1/.test(location.search)) { const ok = document.getElementById('form-ok'); if (ok) { ok.style.display = 'block'; ok.scrollIntoView({block:'center'}); } }
+  })();
 </script>
 
 <script>
@@ -224,7 +231,7 @@
     fx1:"Products", fx2:"Contact", fx3:"Manufacturing of industrial plastic and thermoplastic rubber products in Chile, with our own antibacterial technology.", fx4:"© 2026 PlasticMarket Ltda. — Industrial plastics, thermoplastic rubber, tooling, injection, extrusion and coextrusion in Chile. Antibacterial compound with copper particles.", navHome:'Home', navProducts:'Products', navContact:'Contact', navServices:"Services ▾", svc1:"Plastic injection molding", svc2:"Custom plastic parts", svc3:"Antibacterial copper plastic", svc4:"Tooling and molds", svc5:"Extrusion and coextrusion", 
     tabSantiago:'Santiago, Chile', tabMiami:'Miami, USA',
     contactHeroTitle:"Let's talk about your project",
-    contactHeroText:"Fill out the form and we'll reach out on WhatsApp to review the details of your industrial project.",
+    contactHeroText:"Fill out the form, attach your drawing if you have one, and we'll contact you to review the details of your industrial project.",
     formName:'Name *', formNamePh:'Your name',
     formCompany:'Company *', formCompanyPh:'Company name',
     formRole:'Role', formRolePh:'Your role',
@@ -232,7 +239,8 @@
     formEmail:'Email *', formEmailPh:'you@company.com',
     formDesc:'Project description *', formDescPh:'Tell us what you need to manufacture...',
     formSubmit:'I want to develop my project',
-    formNote:'On submit, WhatsApp will open with your request details pre-filled.',
+    formNote:'Your request will reach ventas@plastic-market.com and we will reply shortly. Prefer to talk now? Message us on WhatsApp with the button below.',
+    formFile:'Attach your drawing, sketch or photo (optional)', formFileHelp:'PDF, DWG, DXF, STEP, STL, JPG or PNG. Max 10 MB.', formOk:'Thank you! We received your request and will contact you shortly.',
     addressLabel:'Address', phoneLabel:'Phone / WhatsApp', emailLabel:'Email',
     whatsappBtn:'Message us directly on WhatsApp',
   }};
