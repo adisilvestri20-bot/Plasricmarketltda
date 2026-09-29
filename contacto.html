@@ -88,6 +88,7 @@
       <form id="quote-form" class="reveal" action="https://formsubmit.co/ventas@plastic-market.com" method="POST" enctype="multipart/form-data" style="display: flex; flex-direction: column; gap: 20px;">
         <input type="hidden" name="_subject" value="Nueva solicitud de cotización — plastic-market.com" />
         <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_next" value="https://plastic-market.com/contacto.html?enviado=1" />
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none;" />
         <div id="form-ok" role="status" style="display: none; background: #E8F5E9; border: 1px solid #A5D6A7; color: #1B5E20; padding: 14px 16px; border-radius: 8px; font-size: 15px; font-weight: 600;" data-i18n="formOk">¡Gracias! Recibimos tu solicitud y te contactaremos a la brevedad.</div>
@@ -215,13 +216,41 @@
   (function(){
     const f = document.getElementById('quote-form'); if (!f) return;
     const file = document.getElementById('f-plano');
-    f.addEventListener('submit', (e) => {
+    const b = document.getElementById('submit-btn');
+    const ok = document.getElementById('form-ok');
+    const val = (id) => ((document.getElementById(id) || {}).value || '').trim();
+    function whatsappFallback(){
+      const lines = [
+        'Hola PlasticMarket, quiero desarrollar mi proyecto:',
+        val('f-nombre') && `Nombre: ${val('f-nombre')}`,
+        val('f-empresa') && `Empresa: ${val('f-empresa')}`,
+        val('f-cargo') && `Cargo: ${val('f-cargo')}`,
+        val('f-telefono') && `Teléfono: ${val('f-telefono')}`,
+        val('f-correo') && `Correo: ${val('f-correo')}`,
+        val('f-descripcion') && `Descripción del proyecto: ${val('f-descripcion')}`,
+        (file && file.files && file.files[0]) && `(Tengo un plano para enviar: ${file.files[0].name})`,
+      ].filter(Boolean);
+      const wa = `https://wa.me/56995019832?text=${encodeURIComponent(lines.join('\n'))}`;
+      if (ok) { ok.innerHTML = 'No pudimos enviar el formulario por correo en este momento. <a href="' + wa + '" target="_blank" rel="noopener" style="color:#1B5E20; font-weight:700;">Haz clic aquí para enviarlo por WhatsApp</a> y adjunta tu plano directamente en el chat.'; ok.style.display = 'block'; ok.scrollIntoView({block:'center'}); }
+    }
+    f.addEventListener('submit', async (e) => {
+      e.preventDefault();
       if (file && file.files && file.files[0] && file.files[0].size > 10*1024*1024) {
-        e.preventDefault(); alert('El archivo supera los 10 MB. Por favor envíalo comprimido o por WhatsApp.'); return;
+        alert('El archivo supera los 10 MB. Por favor envíalo comprimido o por WhatsApp.'); return;
       }
-      const b = document.getElementById('submit-btn'); if (b) { b.disabled = true; b.style.opacity = '0.7'; }
+      if (b) { b.disabled = true; b.style.opacity = '0.7'; }
+      try {
+        const r = await fetch(f.action, { method: 'POST', body: new FormData(f) });
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        f.reset();
+        if (ok) { ok.style.display = 'block'; ok.scrollIntoView({block:'center'}); }
+      } catch (err) {
+        whatsappFallback();
+      } finally {
+        if (b) { b.disabled = false; b.style.opacity = ''; }
+      }
     });
-    if (/[?&]enviado=1/.test(location.search)) { const ok = document.getElementById('form-ok'); if (ok) { ok.style.display = 'block'; ok.scrollIntoView({block:'center'}); } }
+    if (/[?&]enviado=1/.test(location.search) && ok) { ok.style.display = 'block'; }
   })();
 </script>
 
