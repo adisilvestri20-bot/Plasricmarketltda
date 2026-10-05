@@ -114,10 +114,17 @@
             <span style="color: #14171A; font-size: 14.5px; line-height: 1.5;"><strong data-i18n="sizesLabel">Medidas personalizadas:</strong> <span id="modal-sizes"></span></span>
           </div>
         </div>
-        <a data-i18n="fx0" href="https://wa.me/56995019832" target="_blank" rel="noopener" style="display: inline-block; background: #1F4E8C; color: #fff; text-decoration: none; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 8px;">Solicitar cotización</a>
+        <a id="modal-page" data-i18n="seePage" href="#" style="display: none; margin-right: 14px; color: #1F4E8C; font-weight: 700; font-size: 15px; text-decoration: none;">Ver ficha completa →</a><a data-i18n="fx0" href="https://wa.me/56995019832" target="_blank" rel="noopener" style="display: inline-block; background: #1F4E8C; color: #fff; text-decoration: none; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 8px;">Solicitar cotización</a>
       </div>
     </div>
   </div>
+
+  <section id="fichas" style="padding: clamp(40px,6vw,64px) clamp(20px,5vw,64px);">
+    <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
+      <div data-i18n="fichasH" style="color: #2E7D32; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;">Fichas de producto</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;"><a data-i18n="lk1" href="tablas-antibacteriales.html" class="pill-link" style="display: inline-flex; align-items: center; background: #fff; border: 1.5px solid #1F4E8C; color: #1F4E8C; text-decoration: none; font-weight: 700; font-size: 14.5px; padding: 12px 20px; border-radius: 999px;">Tablas antibacteriales con cobre</a><a data-i18n="lk2" href="laminas-pvc.html" class="pill-link" style="display: inline-flex; align-items: center; background: #fff; border: 1.5px solid #1F4E8C; color: #1F4E8C; text-decoration: none; font-weight: 700; font-size: 14.5px; padding: 12px 20px; border-radius: 999px;">Láminas de PVC transparente</a><a data-i18n="lk3" href="pisos-antideslizantes-antifatiga.html" class="pill-link" style="display: inline-flex; align-items: center; background: #fff; border: 1.5px solid #1F4E8C; color: #1F4E8C; text-decoration: none; font-weight: 700; font-size: 14.5px; padding: 12px 20px; border-radius: 999px;">Pisos antideslizantes y antifatiga</a><a data-i18n="lk4" href="estacas-plasticas-mineria.html" class="pill-link" style="display: inline-flex; align-items: center; background: #fff; border: 1.5px solid #1F4E8C; color: #1F4E8C; text-decoration: none; font-weight: 700; font-size: 14.5px; padding: 12px 20px; border-radius: 999px;">Estacas plásticas para minería</a></div>
+    </div>
+  </section>
 
   <section style="padding: clamp(64px,9vw,120px) clamp(20px,5vw,64px); background: #0F2A4D;">
     <div class="reveal" style="max-width: 780px; margin: 0 auto; text-align: center;">
@@ -289,6 +296,7 @@
     document.getElementById('modal-detail').textContent = p.detail;
     document.getElementById('modal-colors').textContent = p.colors;
     document.getElementById('modal-sizes').textContent = p.sizes;
+    { const PG = {'prod-tablas-cortar':'tablas-antibacteriales.html','prod-tablas-documento':'tablas-antibacteriales.html','prod-pvc':'laminas-pvc.html','prod-pisos-antifatiga':'pisos-antideslizantes-antifatiga.html','prod-estacas-mineria':'estacas-plasticas-mineria.html'}; const a = document.getElementById('modal-page'); if (PG[p.id]) { a.href = PG[p.id]; a.style.display = 'inline-block'; } else { a.style.display = 'none'; } }
     renderCarousel();
     modal.style.display = 'flex';
   }
@@ -301,7 +309,7 @@
 <script>
 (function(){
   const T = { en: {
-    fx0:"Request a quote", fx2:"Contact", navHome:'Home', navProducts:'Products', navContact:'Contact', navServices:"Services ▾", svc1:"Plastic injection molding", svc2:"Custom plastic parts", svc6:"Thermoplastic rubber (TPE)", svc3:"Antibacterial copper plastic", svc4:"Tooling and molds", svc5:"Extrusion and coextrusion",  navQuote:'Request a quote',
+    fx0:"Request a quote", fichasH:"Product sheets", lk1:"Antibacterial boards with copper", lk2:"Transparent PVC sheets", lk3:"Anti-slip anti-fatigue floors", lk4:"Plastic stakes for mining", seePage:"See full sheet →", fx2:"Contact", navHome:'Home', navProducts:'Products', navContact:'Contact', navServices:"Services ▾", svc1:"Plastic injection molding", svc2:"Custom plastic parts", svc6:"Thermoplastic rubber (TPE)", svc3:"Antibacterial copper plastic", svc4:"Tooling and molds", svc5:"Extrusion and coextrusion",  navQuote:'Request a quote',
     catalogEyebrow:'Catalog', catalogText:'Solutions manufactured in Chile, many available with our antibacterial compound with copper particles.',
     badge:'ANTIBACTERIAL', colorsLabel:'Custom colors:', sizesLabel:'Custom sizes:',
     specialEyebrow:'Special projects', specialTitle:'We manufacture what your company needs.',
