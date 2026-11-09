@@ -263,3 +263,7 @@ html,body{overflow-x:hidden}
  .nav .dd>a.on::after{display:inline-block;position:relative;left:auto;right:auto;bottom:auto;top:-3px;width:6px;height:6px;border:0;border-right:2px solid currentColor;border-bottom:2px solid currentColor;border-radius:0;background:none;transform:rotate(45deg);margin-left:7px}
  .nav .dd>a.on::before{content:"";position:absolute;left:6px;right:6px;bottom:0;height:3px;border-radius:3px;background:var(--lime)}
 }
+
+/* Imagen de «Quiénes somos»: se muestra completa, sin recortes */
+.pic.wide{height:auto!important;aspect-ratio:1100/407;background:#0d2a6b}
+.pic.wide img{width:100%;height:100%;object-fit:contain!important;display:block}
