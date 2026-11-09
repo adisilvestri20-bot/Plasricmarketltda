@@ -252,3 +252,14 @@ html,body{overflow-x:hidden}
  body{padding-bottom:70px}
  img[src*="certificado"]{max-height:260px;object-fit:contain}
 }
+
+/* ===== Selector de idioma y ajustes de cabecera ===== */
+.lang{background:transparent;border:1.5px solid rgba(255,255,255,.35);color:#fff;font:700 13px/1 inherit;font-family:inherit;padding:8px 14px;border-radius:999px;cursor:pointer;letter-spacing:.03em;flex:0 0 auto}
+.lang:hover{border-color:var(--lime);color:var(--lime)}
+@media(max-width:960px){
+ .hdr .wrap .lang{margin-left:auto;order:2}
+ .logo{order:1}
+ /* corrige el palito inclinado sobre «Servicios»: la flecha y la barra activa compartían el mismo pseudo-elemento */
+ .nav .dd>a.on::after{display:inline-block;position:relative;left:auto;right:auto;bottom:auto;top:-3px;width:6px;height:6px;border:0;border-right:2px solid currentColor;border-bottom:2px solid currentColor;border-radius:0;background:none;transform:rotate(45deg);margin-left:7px}
+ .nav .dd>a.on::before{content:"";position:absolute;left:6px;right:6px;bottom:0;height:3px;border-radius:3px;background:var(--lime)}
+}
