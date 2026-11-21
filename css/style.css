@@ -348,3 +348,9 @@ select{width:100%;border:1px solid #d3dbe8;border-radius:8px;padding:11px 14px;f
 html{-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%}
 .ftr .grid{min-width:0}.ftr .grid>*{min-width:0;overflow-wrap:anywhere}
 .ftr .cols>*{min-width:0;overflow-wrap:anywhere}.steps>*,.grid>*{min-width:0}
+
+/* nombre PlasticMarket más grande y siempre visible en móvil */
+@media(max-width:560px){.hdr .logo img.lw{max-width:none!important}}
+@media(max-width:480px){.logo img.lm{height:28px!important}.logo img.lw{height:18px!important;display:block!important}.callbtn,.srchbtn,.burger{width:36px!important;height:36px!important}.hdr .wrap{gap:6px;padding-left:12px;padding-right:12px}}
+@media(max-width:380px){.logo img.lm{height:26px!important}.logo img.lw{height:16px!important}}
+@media(max-width:340px){.logo img.lw{height:13px!important}}
