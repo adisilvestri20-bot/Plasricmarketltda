@@ -344,3 +344,7 @@ select{width:100%;border:1px solid #d3dbe8;border-radius:8px;padding:11px 14px;f
  div[style*="200px 1fr"] .pic{height:210px!important}
  .search.big input{font-size:16px}
 }
+/* modo "sitio de escritorio" en móvil: evitar que el navegador agrande párrafos */
+html{-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%}
+.ftr .grid{min-width:0}.ftr .grid>*{min-width:0;overflow-wrap:anywhere}
+.ftr .cols>*{min-width:0;overflow-wrap:anywhere}.steps>*,.grid>*{min-width:0}
