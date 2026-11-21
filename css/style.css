@@ -336,7 +336,8 @@ select{width:100%;border:1px solid #d3dbe8;border-radius:8px;padding:11px 14px;f
  .srchbtn svg{width:19px;height:19px}
  .burger{width:40px!important;height:40px!important;font-size:22px;padding:0!important}
 }
-@media(max-width:360px){.logo img.lw{display:none}}
+@media(max-width:380px){.logo img.lm{height:26px!important}.logo img.lw{height:13px!important;display:block!important}.callbtn,.srchbtn,.burger{width:36px!important;height:36px!important}.hdr .wrap{gap:6px;padding-left:12px;padding-right:12px}}
+@media(max-width:330px){.logo img.lw{height:11px!important}}
 @media(max-width:760px){
  div[style*="grid-template-columns"]:not(.chips):not(.steps){grid-template-columns:1fr!important}
  .steps[style*="grid-template-columns"]{grid-template-columns:1fr!important}
